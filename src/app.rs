@@ -42,21 +42,9 @@ pub fn App() -> impl IntoView {
     };
 
     view! {
-        <Header />
-        <LandingComponent />
-        // <main class="container">
-        //     <p>"Ooh this my mobile app times, wuh"</p>
-        //
-        //     <form class="row" on:submit=greet>
-        //         <input
-        //             id="greet-input"
-        //             placeholder="Enter a name..."
-        //             on:input=update_name
-        //         />
-        //         <button type="submit">"Enter"</button>
-        //     </form>
-        //
-        //     <p><b>{ move || greet_msg.get() }</b></p>
-        // </main>
+        <div class="h-screen w-full flex flex-col">
+            <Header />
+            <LandingComponent />
+        </div>
     }
 }

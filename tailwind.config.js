@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ['ProtestStrike', 'sans-serif']
+        heading: ['ProtestStrike', 'sans-serif']
       }
     },
   },
