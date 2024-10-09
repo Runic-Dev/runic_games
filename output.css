@@ -588,6 +588,41 @@ video {
   }
 }
 
+.flex {
+  display: flex;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.bg-slate-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+@font-face {
+  font-family: 'ProtestStrike';
+
+  src: url('./public/fonts/ProtestStrike-Regular.ttf') format('truetype');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
 .logo.leptos:hover {
   filter: drop-shadow(0 0 2em #a82e20);
 }

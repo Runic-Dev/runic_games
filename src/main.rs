@@ -1,4 +1,6 @@
 mod app;
+pub mod header;
+pub mod landing_component;
 
 use app::*;
 use leptos::*;

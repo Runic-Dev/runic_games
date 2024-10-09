@@ -3,6 +3,8 @@ use leptos::*;
 use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::*;
 
+use crate::{header::Header, landing_component::LandingComponent};
+
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_namespace = ["window", "__TAURI__", "core"])]
@@ -19,10 +21,10 @@ pub fn App() -> impl IntoView {
     let (name, set_name) = create_signal(String::new());
     let (greet_msg, set_greet_msg) = create_signal(String::new());
 
-    let update_name = move |ev| {
-        let v = event_target_value(&ev);
-        set_name.set(v);
-    };
+    // let update_name = move |ev| {
+    //     let v = event_target_value(&ev);
+    //     set_name.set(v);
+    // };
 
     let greet = move |ev: SubmitEvent| {
         ev.prevent_default();
@@ -40,19 +42,21 @@ pub fn App() -> impl IntoView {
     };
 
     view! {
-        <main class="container">
-            <p>"Ooh this my mobile app times, wuh"</p>
-
-            <form class="row" on:submit=greet>
-                <input
-                    id="greet-input"
-                    placeholder="Enter a name..."
-                    on:input=update_name
-                />
-                <button type="submit">"Enter"</button>
-            </form>
-
-            <p><b>{ move || greet_msg.get() }</b></p>
-        </main>
+        <Header />
+        <LandingComponent />
+        // <main class="container">
+        //     <p>"Ooh this my mobile app times, wuh"</p>
+        //
+        //     <form class="row" on:submit=greet>
+        //         <input
+        //             id="greet-input"
+        //             placeholder="Enter a name..."
+        //             on:input=update_name
+        //         />
+        //         <button type="submit">"Enter"</button>
+        //     </form>
+        //
+        //     <p><b>{ move || greet_msg.get() }</b></p>
+        // </main>
     }
 }

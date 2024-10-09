@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'ProtestStrike';
+  src: url('./public/fonts/ProtestStrike-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .logo.leptos:hover {
   filter: drop-shadow(0 0 2em #a82e20);
 }

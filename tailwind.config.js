@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.rs"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        custom: ['ProtestStrike', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }
