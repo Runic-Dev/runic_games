@@ -3,7 +3,7 @@ use leptos::*;
 use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::*;
 
-use crate::{header::Header, landing_component::LandingComponent};
+use crate::{footer::Footer, header::Header, landing_component::LandingComponent};
 
 #[wasm_bindgen]
 extern "C" {
@@ -45,6 +45,7 @@ pub fn App() -> impl IntoView {
         <div class="h-screen w-full flex flex-col">
             <Header />
             <LandingComponent />
+            <Footer />
         </div>
     }
 }

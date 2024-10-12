@@ -1,4 +1,7 @@
 mod app;
+pub mod colors;
+pub mod footer;
+pub mod game_menu;
 pub mod header;
 pub mod landing_component;
 
