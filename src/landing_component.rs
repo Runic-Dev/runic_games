@@ -1,18 +1,18 @@
 use leptos::{component, view, IntoView};
+use leptos_router::{Route, Router, Routes};
 
-use crate::game_menu::GameMenu;
+use crate::{game_menu::GameMenu, games::minesweeper::minesweeper_game::MinesweeperGame};
 
 #[component]
 pub fn LandingComponent() -> impl IntoView {
-    let button_classes =
-        "btn w-content p-2 m-2 bg-theme-green rounded text-center text-white border-theme-dark-green";
     view! {
-        <div class="h-auto w-full bg-theme-grey flex-1 flex flex-col justify-center items-center">
-            <GameMenu />
-            // <ul class="h-content w-full flex flex-col justify-between items-center">
-            //     <li><button class=button_classes data-theme="none">Minesweeper</button></li>
-            //     <li class="m-2">More coming soon...</li>
-            // </ul>
+        <div class="bg-theme-grey h-auto w-full flex-1 flex flex-col justify-center items-center">
+            <Router>
+                <Routes>
+                    <Route path="/" view=|| view! { <GameMenu />} />
+                    <Route path="/minesweeper" view=|| view! { <MinesweeperGame /> } />
+                </Routes>
+            </Router>
         </div>
     }
 }
