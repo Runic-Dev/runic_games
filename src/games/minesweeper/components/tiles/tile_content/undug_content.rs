@@ -6,8 +6,8 @@ use super::get_generic_classes;
 pub fn UndugTileContent(is_flagged: bool) -> impl IntoView {
     let mut classes = get_generic_classes();
     classes.extend(&[
-        "bg-theme-green",
-        "border-solid border-2 border-theme-dark-green",
+        "bg-themeGreen",
+        "border-solid border-2 border-themeDarkGreen",
         "text-slate-800",
         "p-1",
         "z-[9999]",

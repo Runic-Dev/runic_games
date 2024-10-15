@@ -6,7 +6,7 @@ use crate::{game_menu::GameMenu, games::minesweeper::minesweeper_game::Minesweep
 #[component]
 pub fn LandingComponent() -> impl IntoView {
     view! {
-        <div class="bg-theme-grey h-auto w-full flex-1 flex flex-col justify-center items-center">
+        <div class="bg-themeGrey h-auto w-full flex-1 flex flex-col justify-center items-center">
             <Router>
                 <Routes>
                     <Route path="/" view=|| view! { <GameMenu />} />
